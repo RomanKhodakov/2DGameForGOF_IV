@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace ExampleGame
 {
-    internal sealed class UserInterfaceController : IInitialization, IExecute, ICleanup
+    internal sealed class UserInterfaceController : IExecute, ICleanup
     {
         private readonly List<BaseUi> _uiPanels;
         private readonly Stack<StateUI> _stateUi = new Stack<StateUI>();
@@ -24,14 +24,6 @@ namespace ExampleGame
             _firstPanelInputProxy.AxisOnChange += FirstPanelOnAxisOnChange;
             _secondPanelInputProxy.AxisOnChange += SecondPanelOnAxisOnChange;
             _cancelInputProxy.AxisOnChange += CancelOnAxisOnChange;
-        }
-
-        public void Initialization()
-        {
-            foreach (var panel in _uiPanels)
-            {
-                panel.Cancel();
-            }
         }
 
         private void FirstPanelOnAxisOnChange(bool value)
