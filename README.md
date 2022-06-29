@@ -15,7 +15,7 @@ Composite - для объединения всех Move врагов в один
 
 Decorator - для изменения поведения пуль (ModificationShootType.cs);
 
-Proxy - для проверки перед выстрелом или созданием врага, могут ли они создаваться (EnemySpawnerProxy.cs);
+Proxy - для проверки перед созданием врагов, могут ли они создаваться (EnemySpawnerProxy.cs);
 
 Chain of responsibility - для изменения урона персонажа с изменением его здоровья (PlayerModifier.cs);
 
